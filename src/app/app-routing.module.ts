@@ -9,6 +9,7 @@ import { CallsComponent } from './calls/calls.component';
 import { ContactComponent } from './contact/contact.component';
 import { TeamComponent } from './team/team.component';
 import { SettingComponent } from './setting/setting.component';
+import { LoginComponent } from './account/login/login.component';
 
 const routes: Routes = [
   { path: '', component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard] },
@@ -19,6 +20,10 @@ const routes: Routes = [
   {path: 'contact', component:ContactComponent},
   {path: 'team', component:TeamComponent},
   {path: 'setting', component:SettingComponent},
+  {
+    path: "login",
+    component: LoginComponent
+  }
 
 ];
 
