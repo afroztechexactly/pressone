@@ -10,8 +10,11 @@ import { ContactComponent } from './contact/contact.component';
 import { TeamComponent } from './team/team.component';
 import { SettingComponent } from './setting/setting.component';
 import { LoginComponent } from './account/login/login.component';
+import { DashboardComponent } from './pages/dashboards/dashboard/dashboard.component';
 
 const routes: Routes = [
+
+  // { path: '', redirectTo : 'dashboard', pathMatch:'full'},
   { path: '', component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard] },
   { path: 'auth', loadChildren: () => import('./account/account.module').then(m => m.AccountModule)  },
   { path: 'pages', loadChildren: () => import('./extraspages/extraspages.module').then(m => m.ExtraspagesModule), canActivate: [AuthGuard] },
@@ -23,7 +26,12 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginComponent
-  }
+  },
+  {
+    path: "dashboard",
+    component: DashboardComponent
+  },
+
 
 ];
 
