@@ -516,7 +516,7 @@
                     </div>
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link menu-link" routerLink="/calls">
+                            <a class="nav-link menu-link" routerLink="/call">
                                 <i class="ri-phone-line fs-16"></i> <span data-key="t-widgets">Calls</span>
                             </a>
                         </li>
@@ -618,70 +618,74 @@
                                     <div>
                                         <div class="table-responsive table-card">
                                             <table class="table align-middle" id="customerTable">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th scope="col" style="width: 50px;">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" id="checkAll" value="option">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+                                                    <th class="sort" data-sort="phone">Phone</th>
+                                                    <th class="sort" data-sort="name">User</th>
+                                                    <th class="sort" data-sort="company_name">Duration</th>
+                                                    <th class="sort" data-sort="notes">Notes</th>
+                                                    <th class="sort" data-sort="date">Call details</th>
+                                                    <th class="sort" data-sort="action">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="chk_child" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                    <td class="phone">
+                                                    <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i class="bx bx-phone-outgoing fs-20"></i>
                                                             </div>
-                                                        </th>
-
-                                                        <th class="sort" data-sort="name">Name</th>
-                                                        <th class="sort" data-sort="company_name">Company</th>
-                                                        <th class="sort" data-sort="phone">Phone</th>
-                                                        <th class="sort" data-sort="location">Location</th>
-                                                        <th class="sort" data-sort="date">Create Date</th>
-                                                        <th class="sort" data-sort="action">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="list form-check-all">
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" name="chk_child" value="option1">
-                                                            </div>
-                                                        </th>
-                                                        <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-shrink-0">
-                                                                    <img src="assets/images/users/avatar-10.jpg" alt="" class="avatar-xxs rounded-circle image_src object-cover">
-                                                                </div>
-                                                                <div class="flex-grow-1 ms-2 name">Tonya Noble</div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="company_name">Force Medicines</td>
-                                                        <td class="phone">580-464-4694</td>
-                                                        <td class="location">Los Angeles, USA</td>
-                                                        <td class="date">07 Apr, 2021</td>
-                                                        <td>
-                                                            <ul class="list-inline hstack gap-2 mb-0">
-                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Call">
-                                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                                        <i class="ri-phone-line fs-16"></i>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Message">
-                                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
-                                                                        <i class="ri-question-answer-line fs-16"></i>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                                    <a href="javascript:void(0);"><i class="ri-eye-fill align-bottom text-muted"></i></a>
-                                                                </li>
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
-                                                                    <a class="edit-item-btn" href="#showModal" data-bs-toggle="modal"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
-                                                                </li>
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Delete">
-                                                                    <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
-                                                                        <i class="ri-delete-bin-fill align-bottom text-muted"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                            <div class="flex-grow-1 ms-2 name">580-464-4694</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                            Tonya Noble
+                                                    </td>
+                                                    <td class="company_name">0:20 sec</td>
+                                                    <td class="location">Los Angeles, USA</td>
+                                                    <td class="date">07 Apr, 2021</td>
+                                                    <td>
+                                                        <ul class="list-inline hstack gap-2 mb-0">
+                                                            <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Call">
+                                                                <a href="javascript:void(0);" class="text-muted d-inline-block">
+                                                                    <i class="ri-phone-line fs-16"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Message">
+                                                                <a href="javascript:void(0);" class="text-muted d-inline-block">
+                                                                    <i class="ri-question-answer-line fs-16"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                                <a href="javascript:void(0);"><i class="ri-eye-fill align-bottom text-muted"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
+                                                                <a class="edit-item-btn" href="#showModal" data-bs-toggle="modal"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Delete">
+                                                                <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
+                                                                    <i class="ri-delete-bin-fill align-bottom text-muted"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Record">
+                                                                <a href="javascript:void(0);"><i class="bx bx-play  align-bottom text-muted fs-22"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                             <div class="noresult" style="display: none">
                                                 <div class="text-center">
                                                     <!-- <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon> -->
