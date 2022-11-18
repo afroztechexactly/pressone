@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  detail=false
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showDetail(){
+    this.detail=!this.detail
+
   }
 
 }

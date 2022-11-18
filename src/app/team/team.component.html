@@ -643,7 +643,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+                                                <tr (click)="showDetail()">
                                                     <td class="d-flex">
                                                         <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-xs rounded-3 me-2">
                                                         <div>
@@ -676,7 +676,7 @@
                                 
                           
                     </div><!-- end col -->
-                    <div class="col-xxl-3">
+                    <div *ngIf="detail" class="col-xxl-3">
                         <div class="card" id="contact-view-detail">
                             <div class="d-flex justify-content-left mt-3 gap-2 card-body">
                                 <div class="position-relative d-inline-block">
