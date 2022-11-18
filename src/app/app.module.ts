@@ -26,6 +26,7 @@ import { CallsComponent } from './calls/calls.component';
 import { ContactComponent } from './contact/contact.component';
 import { TeamComponent } from './team/team.component';
 import { SettingComponent } from './setting/setting.component';
+import { CallComComponent } from './call-com/call-com.component';
 
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -43,7 +44,8 @@ if (environment.defaultauth === 'firebase') {
     CallsComponent,
     ContactComponent,
     TeamComponent,
-    SettingComponent
+    SettingComponent,
+    CallComComponent
   ],
   imports: [
     TranslateModule.forRoot({
