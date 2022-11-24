@@ -16,12 +16,15 @@ import { SigninModule } from "./auth/signin/signin.module";
 import { SignupModule } from "./auth/signup/signup.module";
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { OtpComponent } from './otp/otp.component';
+
 
 @NgModule({
   declarations: [
     RegisterComponent,
     LoginComponent,
-    ToastsContainer
+    ToastsContainer,
+    OtpComponent
   ],
   imports: [
     CommonModule,

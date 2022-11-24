@@ -12,10 +12,11 @@ import { SettingComponent } from './setting/setting.component';
 import { LoginComponent } from './account/login/login.component';
 import { DashboardComponent } from './pages/dashboards/dashboard/dashboard.component';
 import { CallComComponent } from './call-com/call-com.component';
+import { OtpComponent } from './account/otp/otp.component';
 
 const routes: Routes = [
 
-   { path: '', redirectTo : 'call', pathMatch:'full'},
+   { path: '', redirectTo : 'login', pathMatch:'full'},
   // { path: '', component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard] },
   { path: 'auth', loadChildren: () => import('./account/account.module').then(m => m.AccountModule)  },
   { path: 'pages', loadChildren: () => import('./extraspages/extraspages.module').then(m => m.ExtraspagesModule), canActivate: [AuthGuard] },
@@ -30,8 +31,8 @@ const routes: Routes = [
   },
 
   {
-    path: "call-list",
-    component: CallComComponent
+    path: "otp",
+    component: OtpComponent
   },
 
   

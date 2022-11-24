@@ -7,3 +7,175 @@
 {
   max-width: 100px;
 }
+.mx-100
+{
+  max-width: 70px !important;
+}
+.btnn
+{
+  max-width: 100px;
+}
+.table-nowrap td.overview
+{
+  max-width: 150px;
+  white-space: unset;
+}
+.table-nowrap td.activity
+{
+  max-width: 150px;
+  white-space: unset;
+}
+.no-bg 
+{
+  background-color: transparent !important;
+}
+.team-box .team-cover::before
+{
+  background: -webkit-gradient linear,left bottom,left top,from #25A0E2 ,to #105378 !important; 
+  background: linear-gradient(to top,#25A0E2,#105378) !important;
+}
+.team-list.grid-view-filter .team-box .view-btn {
+  margin-top: 0px !important;
+}
+.profile-wid-bg::before
+{
+  background: -webkit-gradient linear,left bottom,left top,from #25A0E2 ,to #105378;
+  background: linear-gradient(to bottom,#25A0E2,#105378);
+}
+.opa-o
+{
+  opacity: 0;
+}
+.text-primary
+{
+  color: #25A0E2 !important;
+}
+a{
+  color: #25A0E2;
+}
+.nav-tabs-custom .nav-item .nav-link.active {
+  color: #25A0E2;
+}
+.nav-link
+{
+   color: #25A0E2;
+}
+.nav-tabs-custom .nav-item .nav-link::after
+{
+  background: #25A0E2;
+}
+.navbar-menu
+{
+  background:#F6F8FA !important;
+  border-right: 1px solid #F6F8FA !important;
+}
+.navbar-brand-box {
+  text-align: left;
+}
+.navbar-nav .nav-link
+{
+  color:#6D7080 !important;
+  font-size: 16px !important;
+}
+.navbar-menu .navbar-nav .nav-link:hover
+{
+  color:#25A0E2 !important;
+}
+.app-search span.search-widget-icon
+{
+  right: 6px;
+  left: unset;
+  font-size:26px;
+}
+.app-search .form-control {
+  padding-left: 15px;
+}
+.grn 
+{
+  color:#45CB85 !important;
+}
+.call-lists .form-select
+{
+  padding: .5rem 22px .5rem .9rem;
+  background-position: right 4px center;
+  width: auto;
+
+}
+.listjs-pagination li.active .page
+{
+  background-color: #25A0E2;
+  border-color: #25A0E2;
+}
+.btn-soft-pink {
+  color: #870AB3;
+  background-color: rgba(135, 10, 179, 0.176471);;
+  border-color: transparent;
+}
+.btn-primary
+{
+  background-color: #25A0E2;
+  border-color: #25A0E2;
+}
+.auth-one-bg .bg-overlay {
+  background: linear-gradient(135deg, rgba(27, 143, 205, 0.9) 0%, rgba(37, 160, 226, 0.9) 100%);
+}
+.text-white-100 {
+  color: rgba(255,255,255,1) !important;
+}
+.hg-3
+{
+  min-height: 500px;
+}
+.heg-3
+{
+  min-height: 270px;
+}
+.auth-bg-cover > .bg-overlay
+{
+  background-image: url(./assets/images/login-bg.png) !important;
+}
+.ms-rg-5
+{
+  margin-right: 5px;
+}
+.bg-5
+{
+  background-color: transparent;
+  border:1px solid #cfd5db;
+  border-width: 1px 0 1px 1px !important;
+}
+.bg-5:focus
+{
+  border:1px solid #cfd5db !important;
+  border-width: 1px 0 1px 1px !important;
+}
+.flag-input
+{
+  border-left: 0px !important;
+  border:1px solid #cfd5db;
+}
+.flag-input:focus
+{
+  border:1px solid #cfd5db;
+}
+.mt-10 {
+  margin-top: 6rem !important;
+}
+.bg-5::before {
+  content: "\f0140";
+  font-family: "Material Design Icons";
+  position: absolute;
+  right: -5px;
+  top: .5rem;
+  font-size: 16px;
+}
+.bg-5::after {
+  content: "";
+  font-family: "Material Design Icons";
+  position: absolute;
+  right: -8px;
+  top: 5px;
+  font-size: 16px;
+  border-right:1px solid #cfd5db;
+  height: 25px;
+}

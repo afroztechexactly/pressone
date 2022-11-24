@@ -48,8 +48,8 @@ export class LoginComponent implements OnInit {
      * Form Validatyion
      */
      this.loginForm = this.formBuilder.group({
-      email: ['admin@themesbrand.com', [Validators.required, Validators.email]],
-      password: ['123456', [Validators.required]],
+      //email: ['admin@themesbrand.com', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required]],
     });
     // get return url from route parameters or default to '/'
     // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
 
     // Login Api
-    this.authenticationService.login(this.f['email'].value, this.f['password'].value).subscribe((data:any) => { 
+    this.authenticationService.login( this.f['phone'].value).subscribe((data:any) => { 
       if(data.status == 'success'){
         localStorage.setItem('toast', 'true');
         localStorage.setItem('currentUser', JSON.stringify(data.data));
@@ -103,6 +103,10 @@ export class LoginComponent implements OnInit {
    */
    toggleFieldTextType() {
     this.fieldTextType = !this.fieldTextType;
+  }
+
+  goToOtp(){
+    this.router.navigate(['/otp'])
   }
 
 }
